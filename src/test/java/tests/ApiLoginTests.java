@@ -2,11 +2,11 @@ package tests;
 
 import config.ServerConfig;
 import org.aeonbits.owner.ConfigFactory;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import steps.Steps;
 
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric;
 import static org.testng.Assert.assertEquals;
 
 public class ApiLoginTests {
@@ -21,19 +21,19 @@ public class ApiLoginTests {
 
     @Test
     public void userLoginInvalidUsername() {
-        String token = steps.goBookerCreateInvalidToken(RandomStringUtils.randomAlphanumeric(10), config.restful_booker_password());
+        String token = steps.goBookerCreateInvalidToken(randomAlphanumeric(10), config.restful_booker_password());
         Assert.assertNotNull(token);
     }
 
     @Test
     public void userLoginInvalidPassword() {
-        String reason = steps.goBookerCreateInvalidToken(config.restful_booker_username(), RandomStringUtils.randomAlphanumeric(10));
+        String reason = steps.goBookerCreateInvalidToken(config.restful_booker_username(), randomAlphanumeric(10));
         assertEquals(reason, "Bad credentials");
     }
 
     @Test
     public void userLoginBigDetailsInvalid() {
-        String reason = steps.goBookerCreateInvalidToken(RandomStringUtils.randomAlphanumeric(10000), RandomStringUtils.randomAlphanumeric(10000));
+        String reason = steps.goBookerCreateInvalidToken(randomAlphanumeric(10000), randomAlphanumeric(10000));
         assertEquals(reason, "Bad credentials");
     }
 
