@@ -10,8 +10,8 @@ public class Specifications {
 
     public static RequestSpecification requestSpec() {
         return new RequestSpecBuilder()
-                .setBaseUri("https://restful-booker.herokuapp.com/")
-                .setContentType(ContentType.ANY)
+                .setBaseUri("https://restful-booker.herokuapp.com")
+                .setContentType(ContentType.JSON)
                 .build();
     }
 
