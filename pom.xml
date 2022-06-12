@@ -17,6 +17,8 @@
         <assertj-core.version>3.22.0</assertj-core.version>
         <rest-assured.version>5.0.1</rest-assured.version>
         <testng.version>7.5</testng.version>
+        <owner.version>1.0.12</owner.version>
+        <slf4j.version>1.7.5</slf4j.version>
     </properties>
 
 
@@ -51,6 +53,21 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure-testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>${owner.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
 
