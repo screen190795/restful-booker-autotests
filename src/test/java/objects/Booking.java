@@ -2,21 +2,13 @@ package objects;
 
 
 public class Booking {
+
     private String firstname;
     private String lastname;
-    private int totalprice;
-    private boolean depositpaid;
+    private Integer totalprice;
+    private Boolean depositpaid;
     private Bookingdates bookingdates;
-    private Object additionalneeds;
-
-    public Booking(String firstname, String lastname, int totalprice, boolean depositpaid, Bookingdates bookingdates, Object additionalneeds) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.totalprice = totalprice;
-        this.depositpaid = depositpaid;
-        this.bookingdates = bookingdates;
-        this.additionalneeds = additionalneeds;
-    }
+    private String additionalneeds;
 
     public String getFirstname() {
         return firstname;
@@ -34,19 +26,19 @@ public class Booking {
         this.lastname = lastname;
     }
 
-    public int getTotalprice() {
+    public Integer getTotalprice() {
         return totalprice;
     }
 
-    public void setTotalprice(int totalprice) {
+    public void setTotalprice(Integer totalprice) {
         this.totalprice = totalprice;
     }
 
-    public boolean isDepositpaid() {
+    public Boolean getDepositpaid() {
         return depositpaid;
     }
 
-    public void setDepositpaid(boolean depositpaid) {
+    public void setDepositpaid(Boolean depositpaid) {
         this.depositpaid = depositpaid;
     }
 
@@ -58,11 +50,11 @@ public class Booking {
         this.bookingdates = bookingdates;
     }
 
-    public Object getAdditionalneeds() {
+    public String getAdditionalneeds() {
         return additionalneeds;
     }
 
-    public void setAdditionalneeds(Object additionalneeds) {
+    public void setAdditionalneeds(String additionalneeds) {
         this.additionalneeds = additionalneeds;
     }
 }
